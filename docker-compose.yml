@@ -8,7 +8,7 @@ services:
       - .:/app
     working_dir: /app
     ports:
-      - "3838:3838"
+      - "3840:3838"
     restart: always
     networks:
       - landkreis_network
