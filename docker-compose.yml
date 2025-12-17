@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  ismg_landkreis_karte:
+    build: .
+    container_name: ismg_landkreis_dashboard
+    volumes:
+      - .:/app
+    working_dir: /app
+    ports:
+      - "3838:3838"
+    restart: always
+    networks:
+      - landkreis_network
+
+networks:
+  landkreis_network:
+    external: false
