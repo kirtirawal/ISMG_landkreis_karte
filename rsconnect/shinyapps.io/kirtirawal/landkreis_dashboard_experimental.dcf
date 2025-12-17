@@ -1,0 +1,10 @@
+name: landkreis_dashboard_experimental
+title:
+username: kirtirawal
+account: kirtirawal
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16005437
+bundleId: 11225297
+url: https://kirtirawal.shinyapps.io/landkreis_dashboard_experimental/
+version: 1
