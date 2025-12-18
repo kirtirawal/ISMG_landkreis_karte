@@ -58,3 +58,136 @@ Das Dashboard verarbeitet eine Vielzahl öffentlicher Daten, darunter:
 * `www/`: Statische Inhalte wie benutzerdefiniertes CSS und Bilder.
 
 ---
+
+## Releases & Versioning
+
+<Here’s a clear, concise **documentation template** you can include in your project to explain how releases and the `VERSION` file work. This can be in a file called `RELEASE_GUIDE.md` or part of your `README.md`.
+
+---
+
+# Project Release Documentation
+
+## 1. Purpose
+
+This document explains how **project releases** are managed, how the **versioning system** works, and the workflow for creating a new release.
+
+---
+
+## 2. Versioning System
+
+We use **date-based versioning**:
+
+```
+YYYY.MM.DD
+```
+
+* Represents the date the release became stable.
+* Example: `2025.12.18`
+* If multiple releases occur on the same day, a revision suffix is added:
+
+  ```
+  YYYY.MM.DD-r1
+  YYYY.MM.DD-r2
+  ```
+
+**Key Points:**
+
+* Version changes happen **only on the `main` branch**.
+* Feature branches do **not** touch the version file.
+* The version is stored in a single file: `VERSION`.
+
+---
+
+## 3. The `VERSION` file
+
+* Location: project root
+* Content: the current release version
+* Example:
+
+  ```
+  2025.12.18
+  ```
+* This file is the authoritative source for the project version.
+* All release-related operations (PR title, Git tag, release notes) refer to this version.
+
+**Accessing the version in R:**
+
+```r
+project_version <- readLines("VERSION")
+print(project_version)
+```
+
+---
+
+## 4. Release Workflow
+
+### Step 1: Create a feature branch
+
+```bash
+git checkout -b feature/<feature-name>
+```
+
+* All development work happens here.
+* **Do not** update the `VERSION` file on this branch.
+
+### Step 2: Merge to `main`
+
+* After the feature is complete and stable, create a Pull Request (PR) to merge the branch into `main`.
+* PR title format:
+
+```
+[YYYY.MM.DD] Short description
+```
+
+### Step 3: Update version
+
+* On `main`, update `VERSION` to the release date (and revision if needed).
+* Commit the change.
+
+### Step 4: Tag the release
+
+```bash
+git tag vYYYY.MM.DD
+git push origin vYYYY.MM.DD
+```
+
+### Step 5: Optional GitHub/GitLab release
+
+* Go to **Releases** → **Create New Release**
+* Use the same tag as the version
+* Add release notes or changelog entries
+
+---
+
+## 5. Changelog (optional)
+
+Maintain a simple `CHANGES.txt`:
+
+```
+2025.12.18
+- Added VERSION file
+- Updated dashboard filters
+
+2025.11.30
+- Initial working version
+```
+
+---
+
+## 6. Guidelines for collaborators
+
+* Only update the `VERSION` file on `main` during a release.
+* Feature branches are **WIP** and do not touch the version.
+* Use PR titles to indicate the intended release version.
+* Tags and `VERSION` file must match.
+
+---
+
+This ensures anyone viewing the repo understands:
+
+* How version numbers are assigned
+* How releases are created
+* How to read or use the project version
+
+---
+>
