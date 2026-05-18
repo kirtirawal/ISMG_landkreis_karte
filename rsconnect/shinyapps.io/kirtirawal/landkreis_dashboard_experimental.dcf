@@ -5,6 +5,8 @@ account: kirtirawal
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 16005437
-bundleId: 11225297
+bundleId: 11980238
 url: https://kirtirawal.shinyapps.io/landkreis_dashboard_experimental/
 version: 1
+asMultiple: FALSE
+asStatic: FALSE
