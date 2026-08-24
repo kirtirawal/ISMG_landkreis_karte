@@ -7,6 +7,9 @@ source("modules/mod_mortality_server.R")
 source("modules/mod_causes_ui.R")
 source("modules/mod_causes_server.R")
 source("modules/carousel_component.R")
+source("modules/mod_gallery_ui.R")
+source("modules/mod_gallery_server.R")
+
 
 ui <- bslib::page_navbar(
   title = "Health Dashboard",
@@ -18,14 +21,13 @@ ui <- bslib::page_navbar(
     dark_mode_js(),
     useShinyjs(),
     
-    # ── Global carousel (shown above all tabs) ──────────────────────────────
+    # Global carousel (unchanged)
     div(class = "global-carousel-wrap",
         div(
           id             = "globalCarousel",
           class          = "carousel slide",
           `data-bs-ride` = "carousel",
           
-          # Indicators
           div(class = "carousel-indicators",
               tags$button(type = "button", `data-bs-target` = "#globalCarousel",
                           `data-bs-slide-to` = "0", class = "active",
@@ -34,7 +36,6 @@ ui <- bslib::page_navbar(
                           `data-bs-slide-to` = "1", `aria-label` = "Slide 2")
           ),
           
-          # Slides — put your images in www/ as slide1.png and slide2.png
           div(class = "carousel-inner",
               div(class = "carousel-item active",
                   tags$img(src = "Picture 1.jpg", class = "d-block w-100 carousel-img",
@@ -54,7 +55,6 @@ ui <- bslib::page_navbar(
               )
           ),
           
-          # Prev / Next arrows
           tags$button(class = "carousel-control-prev", type = "button",
                       `data-bs-target` = "#globalCarousel", `data-bs-slide` = "prev",
                       tags$span(class = "carousel-control-prev-icon", `aria-hidden` = "true"),
@@ -71,12 +71,12 @@ ui <- bslib::page_navbar(
   
   bslib::nav_panel("Overview",       mod_main_ui("main")),
   bslib::nav_panel("Mortality",      mod_mortality_ui("mort")),
-  bslib::nav_panel("Causes of Death", mod_causes_ui("causes"))
+  bslib::nav_panel("Causes of Death", mod_causes_ui("causes")),
+  bslib::nav_panel("Visualisation Gallery", mod_gallery_ui("gallery"))  # ← Added
 )
 
 server <- function(input, output, session) {
   
-  # Reactive that tracks dark mode state (initialised from JS localStorage via input)
   is_dark <- reactive({
     isTRUE(input$global_dark_mode)
   })
@@ -84,6 +84,7 @@ server <- function(input, output, session) {
   mod_main_server("main",   is_dark = is_dark)
   mod_mortality_server("mort", is_dark = is_dark)
   mod_causes_server("causes")
+  mod_gallery_server("gallery", is_dark = is_dark)   # ← Added
 }
 
 shinyApp(ui, server)

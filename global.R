@@ -14,8 +14,10 @@ library(bslib)
 library(DT)
 library(bsicons)
 library(shinyjs)
+#library(reticulate)
 # ---- Load UI helpers (dark mode CSS, toggle button) ----
 source("global_additions.R")
+#source_python("python/plots.py")
 
 # ============================================================
 # 1.  EXISTING DATA  (Landkreis indicators)
