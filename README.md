@@ -1,6 +1,6 @@
----
+﻿---
 title: Landkreis Health Dashboard
-emoji: chart_with_upwards_trend
+emoji: 📈
 colorFrom: blue
 colorTo: green
 sdk: docker
@@ -40,7 +40,7 @@ Hugging Face builds the `Dockerfile` automatically and exposes the app on port `
 
 ---
 
-## 🗺️ Project Overview / Projektübersicht
+## ðŸ—ºï¸ Project Overview / ProjektÃ¼bersicht
 
 The "Interaktiver Landkreis-Explorer mit Zeitreihenanalyse" allows users to explore various indicators across Germany's administrative districts from 2006 to 2023. It provides:
 
@@ -48,15 +48,15 @@ The "Interaktiver Landkreis-Explorer mit Zeitreihenanalyse" allows users to expl
 * **Time-Series Analysis:** Dynamic bar charts that update when a region is clicked on the map, showing trends over time for that specific district.
 * **Customizable Visualization:** Options to switch between different color palettes for the map.
 
-Der „Interaktive Landkreis-Explorer mit Zeitreihenanalyse“ ermöglicht es Nutzern, verschiedene Indikatoren der deutschen Verwaltungsbezirke von 2006 bis 2023 zu untersuchen. Er bietet:
+Der â€žInteraktive Landkreis-Explorer mit Zeitreihenanalyseâ€œ ermÃ¶glicht es Nutzern, verschiedene Indikatoren der deutschen Verwaltungsbezirke von 2006 bis 2023 zu untersuchen. Er bietet:
 
-* **Interaktive Karten:** Eine geografische Visualisierung ausgewählter Parameter in ganz Deutschland.
-* **Zeitreihenanalyse:** Dynamische Balkendiagramme, die sich bei Klick auf eine Region in der Karte aktualisieren und Trends über die Zeit für diesen spezifischen Bezirk anzeigen.
-* **Anpassbare Visualisierung:** Optionen zum Wechseln zwischen verschiedenen Farbpaletten für die Karte.
+* **Interaktive Karten:** Eine geografische Visualisierung ausgewÃ¤hlter Parameter in ganz Deutschland.
+* **Zeitreihenanalyse:** Dynamische Balkendiagramme, die sich bei Klick auf eine Region in der Karte aktualisieren und Trends Ã¼ber die Zeit fÃ¼r diesen spezifischen Bezirk anzeigen.
+* **Anpassbare Visualisierung:** Optionen zum Wechseln zwischen verschiedenen Farbpaletten fÃ¼r die Karte.
 
 ---
 
-## 📊 Available Data Indicators / Verfügbare Datenindikatoren
+## ðŸ“Š Available Data Indicators / VerfÃ¼gbare Datenindikatoren
 
 The dashboard processes a wide range of public data, including:
 
@@ -65,33 +65,33 @@ The dashboard processes a wide range of public data, including:
 * **Migration:** In-migration, out-migration, educational migration, and family migration patterns.
 * **Socio-structural Indices:** Youth quotient, old-age quotient, and population density.
 
-Das Dashboard verarbeitet eine Vielzahl öffentlicher Daten, darunter:
+Das Dashboard verarbeitet eine Vielzahl Ã¶ffentlicher Daten, darunter:
 
-* **Demografie:** Gesamtbevölkerung, Medianalter, Durchschnittsalter und Bevölkerungsentwicklung.
-* **Vitalstatistiken:** Geburtenraten, Sterberaten und natürlicher Bevölkerungssaldo.
-* **Wanderung:** Zuzüge, Fortzüge, Bildungswanderung und Familienwanderungsmuster.
+* **Demografie:** GesamtbevÃ¶lkerung, Medianalter, Durchschnittsalter und BevÃ¶lkerungsentwicklung.
+* **Vitalstatistiken:** Geburtenraten, Sterberaten und natÃ¼rlicher BevÃ¶lkerungssaldo.
+* **Wanderung:** ZuzÃ¼ge, FortzÃ¼ge, Bildungswanderung und Familienwanderungsmuster.
 * **Soziostrukturelle Indizes:** Jugendquotient, Altenquotient und Einwohnerdichte.
 
 ---
 
-## 📂 Repository Structure / Struktur des Repositorys
+## ðŸ“‚ Repository Structure / Struktur des Repositorys
 
 * `app.R`: Main entry point for the Shiny application.
 * `global.R`: Handles library loading and data preprocessing.
 * `modules/`: Modularized UI (`mod_main_ui.R`) and Server (`mod_main_server.R`) logic.
 * `data/`: Source datasets in CSV and Excel formats.
 * `www/`: Static assets like custom CSS and images.
-* `app.R`: Haupteinstiegspunkt für die Shiny-Anwendung.
+* `app.R`: Haupteinstiegspunkt fÃ¼r die Shiny-Anwendung.
 * `global.R`: Verwaltet das Laden von Bibliotheken und die Datenvorverarbeitung.
-* `modules/`: Modularisierte Logik für UI (`mod_main_ui.R`) und Server (`mod_main_server.R`).
-* `data/`: Quelldatensätze in den Formaten CSV und Excel.
+* `modules/`: Modularisierte Logik fÃ¼r UI (`mod_main_ui.R`) und Server (`mod_main_server.R`).
+* `data/`: QuelldatensÃ¤tze in den Formaten CSV und Excel.
 * `www/`: Statische Inhalte wie benutzerdefiniertes CSS und Bilder.
 
 ---
 
 ## Releases & Versioning
 
-<Here’s a clear, concise **documentation template** you can include in your project to explain how releases and the `VERSION` file work. This can be in a file called `RELEASE_GUIDE.md` or part of your `README.md`.
+<Hereâ€™s a clear, concise **documentation template** you can include in your project to explain how releases and the `VERSION` file work. This can be in a file called `RELEASE_GUIDE.md` or part of your `README.md`.
 
 ---
 
@@ -183,7 +183,7 @@ git push origin vYYYY.MM.DD
 
 ### Step 5: Optional GitHub/GitLab release
 
-* Go to **Releases** → **Create New Release**
+* Go to **Releases** â†’ **Create New Release**
 * Use the same tag as the version
 * Add release notes or changelog entries
 
