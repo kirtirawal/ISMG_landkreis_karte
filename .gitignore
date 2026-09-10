@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+app/
+is-a/
+__pycache__/
+*.pyc
+*.log
