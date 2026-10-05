@@ -1,0 +1,27 @@
+# Version control
+.git
+.gitignore
+
+# R / IDE Session-Dateien
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user
+app/
+app.Rproj
+*.dcf
+rsconnect/
+
+# Build-Logs & Sonstiges
+*.log
+is-a/
+
+# Python
+__pycache__/
+*.pyc
+
+# Nicht im Image noetig
+Dockerfile
+.dockerignore
+docker-compose.yml
+README.md

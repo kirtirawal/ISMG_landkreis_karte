@@ -1,0 +1,56 @@
+/* ==========================================================
+   DEMOGRAPHICS PAGE — DARK MODE
+   ========================================================== */
+
+body.dark-mode .demographics-tabs .tab-content,
+[data-bs-theme="dark"] .demographics-tabs .tab-content {
+  background: #111a24;
+  border-color: #2b3a49;
+}
+
+body.dark-mode .overview-feature-card,
+body.dark-mode .overview-indicators-panel,
+body.dark-mode .overview-reading-panel,
+body.dark-mode .demographics-controls,
+body.dark-mode .visualization-panel,
+[data-bs-theme="dark"] .overview-feature-card,
+[data-bs-theme="dark"] .overview-indicators-panel,
+[data-bs-theme="dark"] .overview-reading-panel,
+[data-bs-theme="dark"] .demographics-controls,
+[data-bs-theme="dark"] .visualization-panel {
+  background: #182431;
+  border-color: #2b3a49;
+}
+
+body.dark-mode .overview-introduction h2,
+body.dark-mode .overview-indicators-panel h2,
+body.dark-mode .overview-reading-panel h2,
+body.dark-mode .control-heading h2,
+body.dark-mode .visualization-panel__header h3,
+[data-bs-theme="dark"] .overview-introduction h2,
+[data-bs-theme="dark"] .overview-indicators-panel h2,
+[data-bs-theme="dark"] .overview-reading-panel h2,
+[data-bs-theme="dark"] .control-heading h2,
+[data-bs-theme="dark"] .visualization-panel__header h3 {
+  color: #eef5fb;
+}
+
+body.dark-mode .overview-introduction p,
+body.dark-mode .overview-feature-card p,
+body.dark-mode .control-heading p,
+body.dark-mode .indicator-list li,
+body.dark-mode .reading-steps span,
+[data-bs-theme="dark"] .overview-introduction p,
+[data-bs-theme="dark"] .overview-feature-card p,
+[data-bs-theme="dark"] .control-heading p,
+[data-bs-theme="dark"] .indicator-list li,
+[data-bs-theme="dark"] .reading-steps span {
+  color: #afbfcd;
+}
+
+body.dark-mode .visualization-panel__header,
+body.dark-mode .indicator-list li,
+[data-bs-theme="dark"] .visualization-panel__header,
+[data-bs-theme="dark"] .indicator-list li {
+  border-color: #2b3a49;
+}
